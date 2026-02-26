@@ -1,80 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpTech Home Lending</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <title>JavaScript Tasks</title>
 </head>
 <body>
+    <h2>Check Console for Output</h2>
 
-    <header class="navbar">
-        <div class="container">
-            <a href="#" class="logo">UpTech Lending</a>
-            <nav>
-                <ul>
-                    <li><a href="#features">Loan Programs</a></li>
-                    <li><a href="#calculator">Calculator</a></li>
-                    <li><a href="#apply">Apply Now</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <script>
+        // Task 1: Largest of Three Numbers
+        let a = 10, b = 25, c = 15;
+        console.log("Largest:", Math.max(a, b, c));
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Find The Perfect Loan For Your Dream Home</h1>
-                <p>Fast, transparent, and tailored to you. Let's build your future together.</p>
-                <button onclick="document.getElementById('apply').scrollIntoView();">Get Started</button>
-            </div>
-        </section>
+        // Task 2: Positive, Negative or Zero
+        let num = -5;
+        if (num > 0) console.log("Positive");
+        else if (num < 0) console.log("Negative");
+        else console.log("Zero");
 
-        <section id="features" class="content-section">
-            <div class="container">
-                <h2>Why Choose UpTech Lending?</h2>
-                <div class="card-deck">
-                    <div class="card">
-                        <h3>Competitive Rates</h3>
-                        <p>We shop the market to find you the best possible interest rates, saving you money over the life of your loan.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Expert Guidance</h3>
-                        <p>Our experienced loan officers guide you through every step, making the complex process simple and clear.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Fast & Easy Process</h3>
-                        <p>Our streamlined digital application process means you can get pre-approved in minutes, not days.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        // Task 3: Electricity Bill
+        let units = 250;
+        let bill = 0;
+        if (units <= 100) bill = units * 10;
+        else if (units <= 200) bill = units * 15;
+        else bill = units * 20;
+        console.log("Electricity Bill:", bill);
 
-        <section id="apply" class="content-section form-section">
-            <div class="container">
-                <h2>Ready to Begin?</h2>
-                <p>Fill out the form below to have one of our specialists contact you.</p>
-                <form class="apply-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Full Name" required>
-                        <input type="email" id="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                        <input type="text" id="loan_amount" name="loan_amount" placeholder="Desired Loan Amount" required>
-                    </div>
-                    <button type="submit">Request Consultation</button>
-                </form>
-            </div>
-        </section>
-    </main>
+        // Task 4: Print Even Numbers 1–50
+        console.log("Even Numbers 1-50:");
+        for (let i = 1; i <= 50; i++) {
+            if (i % 2 === 0) console.log(i);
+        }
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 UpTech Lending. All Rights Reserved.</p>
-        </div>
-    </footer>
+        // Task 5: Reverse Counting
+        console.log("Reverse Counting 20-1:");
+        for (let i = 20; i >= 1; i--) {
+            console.log(i);
+        }
 
+        // Task 6: Factorial Calculator
+        let factNum = 5;
+        let factorial = 1;
+        for (let i = 1; i <= factNum; i++) {
+            factorial *= i;
+        }
+        console.log("Factorial of 5:", factorial);
+
+        // Task 7: Count Digits
+        let number = 12345;
+        let digitCount = number.toString().length;
+        console.log("Digit Count:", digitCount);
+
+        // Task 8: Sum of Even Numbers (1–100)
+        let sumEven = 0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 === 0) sumEven += i;
+        }
+        console.log("Sum of Even Numbers (1-100):", sumEven);
+
+        // Task 9: Prime Number Checker
+        let primeNum = 7;
+        let isPrime = true;
+        if (primeNum <= 1) isPrime = false;
+        else {
+            for (let i = 2; i < primeNum; i++) {
+                if (primeNum % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        console.log(primeNum + " is Prime?", isPrime);
+
+        // Task 10: ATM Machine
+        let balance = 1000;
+        let withdraw = 500;
+        if (withdraw <= balance) {
+            balance -= withdraw;
+            console.log("Withdraw Successful. Remaining Balance:", balance);
+        } else {
+            console.log("Insufficient balance");
+        }
+
+        // Task 11: Password Strength Checker
+        let password = "Admin123";
+        let hasNumber = /\d/.test(password);
+        let hasUpper = /[A-Z]/.test(password);
+        if (password.length >= 8 && hasNumber && hasUpper) {
+            console.log("Strong Password");
+        } else {
+            console.log("Weak Password");
+        }
+
+        // Task 12: FizzBuzz
+        console.log("FizzBuzz 1-50:");
+        for (let i = 1; i <= 50; i++) {
+            if (i % 3 === 0 && i % 5 === 0) console.log("FizzBuzz");
+            else if (i % 3 === 0) console.log("Fizz");
+            else if (i % 5 === 0) console.log("Buzz");
+            else console.log(i);
+        }
+
+        // Task 23: Simple Login System
+        let correctUsername = "admin";
+        let correctPassword = "1234";
+        let inputUsername = "admin";
+        let inputPassword = "1234";
+
+        if (inputUsername === correctUsername && inputPassword === correctPassword) {
+            console.log("Login Successful");
+        } else {
+            console.log("Invalid Credentials");
+        }
+    </script>
 </body>
 </html>
