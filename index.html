@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpTech Home Lending</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">UpTech Lending</a>
+            <nav>
+                <ul>
+                    <li><a href="#features">Loan Programs</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#apply">Apply Now</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Find The Perfect Loan For Your Dream Home</h1>
+                <p>Fast, transparent, and tailored to you. Let's build your future together.</p>
+                <button onclick="document.getElementById('apply').scrollIntoView();">Get Started</button>
+            </div>
+        </section>
+
+        <section id="features" class="content-section">
+            <div class="container">
+                <h2>Why Choose UpTech Lending?</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <h3>Competitive Rates</h3>
+                        <p>We shop the market to find you the best possible interest rates, saving you money over the life of your loan.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Expert Guidance</h3>
+                        <p>Our experienced loan officers guide you through every step, making the complex process simple and clear.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Fast & Easy Process</h3>
+                        <p>Our streamlined digital application process means you can get pre-approved in minutes, not days.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="apply" class="content-section form-section">
+            <div class="container">
+                <h2>Ready to Begin?</h2>
+                <p>Fill out the form below to have one of our specialists contact you.</p>
+                <form class="apply-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        <input type="text" id="loan_amount" name="loan_amount" placeholder="Desired Loan Amount" required>
+                    </div>
+                    <button type="submit">Request Consultation</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 UpTech Lending. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
